@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Background from "@/assets/login2.png";
 import Victory from "@/assets/victory.svg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Input } from '@/components/ui/input';
 
 const Auth = () => {
 
@@ -33,12 +34,9 @@ const Auth = () => {
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="login">
-                {/* Add Login Form Here */}
-                <p className="text-center">Login Form Placeholder</p>
+                <Input placeholder="Email" type="email" className="rounded-full p-6" value={email} onChange={(e)=>setEmail(e.target.value)}/>
               </TabsContent>
               <TabsContent value="signup">
-                {/* Add Signup Form Here */}
-                <p className="text-center">Signup Form Placeholder</p>
               </TabsContent>
             </Tabs>
           </div>
