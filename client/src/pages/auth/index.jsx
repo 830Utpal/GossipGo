@@ -33,10 +33,14 @@ const Auth = () => {
                   Signup
                 </TabsTrigger>
               </TabsList>
-              <TabsContent value="login">
+              <TabsContent className="flex  flex-col gap-5 mt-10" value="login">
                 <Input placeholder="Email" type="email" className="rounded-full p-6" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <Input placeholder="Password" type="password" className="rounded-full p-6" value={password} onChange={(e)=>setPassword(e.target.value)}/>
               </TabsContent>
-              <TabsContent value="signup">
+              <TabsContent className="flex  flex-col gap-5" value="signup">
+              <Input placeholder="Email" type="email" className="rounded-full p-6" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+              <Input placeholder="Password" type="password" className="rounded-full p-6" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+              <Input placeholder="Confirm Password" type="password" className="rounded-full p-6" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}/>
               </TabsContent>
             </Tabs>
           </div>
